@@ -1,0 +1,31 @@
+﻿public JWReader(string _ip, int _port) {
+	runningMode = RunningMode.API;
+	rfidSetting = null;
+	fi = null;
+	readData = "";
+	tagData = null;
+	pi = null;
+	ipConfiguration = null;
+	optimal_channel = null;
+	myResetEvent = new ManualResetEvent(initialState: false);
+	inventoryResetEvent = new ManualResetEvent(initialState: false);
+	keepAliveResetEvent = new ManualResetEvent(initialState: false);
+	sendPacket = null;
+	backGroundWorker = new BackgroundWorker();
+	RUNNING = false;
+	IsConnected = false;
+	RFS_Type = RFSType.FCC;
+	AntennaCheckResult = new List<int>();
+	LogHeader = "";
+	antennaPortExists = new Dictionary<int, bool>();
+	ProductType = ProductType.E;
+	ChipType = ChipType.R2000;
+	TagList = new List<TagsEventArgs>();
+	processFinish = true;
+	sendPacket = new JWSend();
+	ip = _ip;
+	port = _port;
+	client = new NetClient(Encoding.UTF8, ip, port, this);
+	LogHeader = "[" + ip + "] ";
+	Init();
+}
