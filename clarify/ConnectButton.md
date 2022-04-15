@@ -23,3 +23,12 @@ N[Not Connect]
 jw --> |== 0| Y
 jw --> |!= 0| N
 ```
+DataColumn include("No.", "Tag_ID", "Last_Time")
+
+
+```mermaid
+flowchart TB;
+
+```
+
+
