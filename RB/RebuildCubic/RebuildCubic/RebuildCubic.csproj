@@ -35,6 +35,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="SF.UHF">
+      <HintPath>..\..\..\立方_RFID Reader\SF.UHF.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
@@ -55,9 +58,13 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="ConnectFolder\Enum_ReaderVersion.cs" />
+    <Compile Include="ConnectFolder\IClient.cs" />
     <Compile Include="StateFolder\StateControl.xaml.cs">
       <DependentUpon>StateControl.xaml</DependentUpon>
     </Compile>
+    <Compile Include="TagFolder\Tag.cs" />
+    <Compile Include="TagFolder\TagsEventArgs.cs" />
     <Page Include="ConnectFolder\ConnectControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -110,7 +117,7 @@
     <None Include="ProgramMustFolder\App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="MainWindowFolder\" />
+    <Folder Include="test\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

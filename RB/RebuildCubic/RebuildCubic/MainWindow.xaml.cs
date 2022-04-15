@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using RebuildCubic.TagFolder;
 
 namespace RebuildCubic {
   /// <summary>
@@ -20,6 +21,9 @@ namespace RebuildCubic {
   public partial class MainWindow : Window {
     public MainWindow() {
       InitializeComponent();
+      Tag t = new Tag();
+      label1.Content = t.EPC;
+
     }
   }
 }
