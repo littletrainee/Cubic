@@ -60,6 +60,30 @@
     </ApplicationDefinition>
     <Compile Include="ConnectFolder\Enum_ReaderVersion.cs" />
     <Compile Include="ConnectFolder\IClient.cs" />
+    <Compile Include="JWReaderFolder\AntenaPort.cs" />
+    <Compile Include="JWReaderFolder\ByteBuffer.cs" />
+    <Compile Include="JWReaderFolder\ChannelTestEvent.cs" />
+    <Compile Include="JWReaderFolder\Constants.cs" />
+    <Compile Include="JWReaderFolder\EnumExtend.cs" />
+    <Compile Include="JWReaderFolder\GPIEvent.cs" />
+    <Compile Include="JWReaderFolder\IPConfiguration.cs" />
+    <Compile Include="JWReaderFolder\ISendPacket.cs" />
+    <Compile Include="JWReaderFolder\JWParsePacket.cs" />
+    <Compile Include="JWReaderFolder\JWReader.cs" />
+    <Compile Include="JWReaderFolder\JWSend.cs" />
+    <Compile Include="JWReaderFolder\LinuxEParsePacket.cs" />
+    <Compile Include="JWReaderFolder\LinuxESend.cs" />
+    <Compile Include="JWReaderFolder\NetClient.cs" />
+    <Compile Include="JWReaderFolder\PacketTypeEnum.cs" />
+    <Compile Include="JWReaderFolder\ProducerConsumerStream.cs" />
+    <Compile Include="JWReaderFolder\ProductInfor.cs" />
+    <Compile Include="JWReaderFolder\ResultEnum.cs" />
+    <Compile Include="JWReaderFolder\RfidSetting.cs" />
+    <Compile Include="JWReaderFolder\SDKLog.cs" />
+    <Compile Include="JWReaderFolder\SerialClient.cs" />
+    <Compile Include="JWReaderFolder\TagsEventArgs.cs" />
+    <Compile Include="JWReaderFolder\UHFException.cs" />
+    <Compile Include="JWReaderFolder\Util.cs" />
     <Compile Include="StateFolder\StateControl.xaml.cs">
       <DependentUpon>StateControl.xaml</DependentUpon>
     </Compile>
