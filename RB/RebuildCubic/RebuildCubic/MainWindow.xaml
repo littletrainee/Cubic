@@ -2,15 +2,23 @@
   x:Class="RebuildCubic.MainWindow"
   xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
   xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+  xmlns:ConnectFolder="clr-namespace:RebuildCubic.ConnectFolder"
+  xmlns:StateFolder="clr-namespace:RebuildCubic.StateFolder"
+  xmlns:TriggerFolder="clr-namespace:RebuildCubic.TriggerFolder"
   xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
   xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-  xmlns:ConnectFolder="clr-namespace:RebuildCubic.ConnectFolder"
   Title="MainWindow"
   Width="800"
   Height="450"
   mc:Ignorable="d"
   >
+  <Window.DataContext>
+    <ConnectFolder:ShowCurrentState />
+  </Window.DataContext>
   <Grid>
-    <ConnectFolder:ConnectControl/>
+    <ConnectFolder:ConnectControl />
+    <StateFolder:StateControl />
+    <TriggerFolder:TriggerControl />
+
   </Grid>
 </Window>

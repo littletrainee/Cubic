@@ -35,8 +35,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="SF.UHF">
-      <HintPath>..\..\..\立方_RFID Reader\SF.UHF.dll</HintPath>
+    <Reference Include="SF.UHF, Version=0.0.0.0, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Dll\SF.UHF.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -58,38 +59,21 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="ConnectFolder\Enum_ReaderVersion.cs" />
-    <Compile Include="ConnectFolder\IClient.cs" />
-    <Compile Include="JWReaderFolder\AntenaPort.cs" />
-    <Compile Include="JWReaderFolder\ByteBuffer.cs" />
-    <Compile Include="JWReaderFolder\ChannelTestEvent.cs" />
-    <Compile Include="JWReaderFolder\Constants.cs" />
-    <Compile Include="JWReaderFolder\EnumExtend.cs" />
-    <Compile Include="JWReaderFolder\GPIEvent.cs" />
-    <Compile Include="JWReaderFolder\IPConfiguration.cs" />
-    <Compile Include="JWReaderFolder\ISendPacket.cs" />
-    <Compile Include="JWReaderFolder\JWParsePacket.cs" />
-    <Compile Include="JWReaderFolder\JWReader.cs" />
-    <Compile Include="JWReaderFolder\JWSend.cs" />
-    <Compile Include="JWReaderFolder\LinuxEParsePacket.cs" />
-    <Compile Include="JWReaderFolder\LinuxESend.cs" />
-    <Compile Include="JWReaderFolder\NetClient.cs" />
-    <Compile Include="JWReaderFolder\PacketTypeEnum.cs" />
-    <Compile Include="JWReaderFolder\ProducerConsumerStream.cs" />
-    <Compile Include="JWReaderFolder\ProductInfor.cs" />
-    <Compile Include="JWReaderFolder\ResultEnum.cs" />
-    <Compile Include="JWReaderFolder\RfidSetting.cs" />
-    <Compile Include="JWReaderFolder\SDKLog.cs" />
-    <Compile Include="JWReaderFolder\SerialClient.cs" />
-    <Compile Include="JWReaderFolder\TagsEventArgs.cs" />
-    <Compile Include="JWReaderFolder\UHFException.cs" />
-    <Compile Include="JWReaderFolder\Util.cs" />
+    <Compile Include="ConnectFolder\ShowCurrentState.cs" />
+    <Compile Include="InventoryFolder\InventoryControl.xaml.cs">
+      <DependentUpon>InventoryControl.xaml</DependentUpon>
+    </Compile>
     <Compile Include="StateFolder\StateControl.xaml.cs">
       <DependentUpon>StateControl.xaml</DependentUpon>
     </Compile>
-    <Compile Include="TagFolder\Tag.cs" />
-    <Compile Include="TagFolder\TagsEventArgs.cs" />
+    <Compile Include="TriggerFolder\TriggerControl.xaml.cs">
+      <DependentUpon>TriggerControl.xaml</DependentUpon>
+    </Compile>
     <Page Include="ConnectFolder\ConnectControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="InventoryFolder\InventoryControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -104,12 +88,15 @@
     <Compile Include="ConnectFolder\ConnectControl.xaml.cs">
       <DependentUpon>ConnectControl.xaml</DependentUpon>
     </Compile>
-    <Compile Include="ConnectFolder\Enum_Connect.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
     <Page Include="StateFolder\StateControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="TriggerFolder\TriggerControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -140,8 +127,6 @@
   <ItemGroup>
     <None Include="ProgramMustFolder\App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="test\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
