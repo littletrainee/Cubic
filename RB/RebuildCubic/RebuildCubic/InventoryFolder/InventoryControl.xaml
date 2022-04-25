@@ -16,16 +16,14 @@
       Margin="672,270,0,0"
       HorizontalAlignment="Left"
       VerticalAlignment="Top"
-      Content="Inventory"
+      Content="Inventory Start"
       IsEnabled="{Binding InventoryButtonSwitch}"
       />
-    <Grid>
-      <DataGrid
-        x:Name="dataGridView1"
-        Width="400"
-        Height="400"
-        d:ItemsSource="{d:SampleData ItemCount=5}"
-        />
-    </Grid>
+    <DataGrid
+      x:Name="dataGridView1"
+      Width="400"
+      Height="400"
+      d:ItemsSource="{d:SampleData ItemCount=5}"
+      />
   </Grid>
 </UserControl>

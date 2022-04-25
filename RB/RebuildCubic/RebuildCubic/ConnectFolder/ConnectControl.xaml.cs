@@ -1,6 +1,7 @@
 ﻿using System.Threading;
 using System.Windows;
 using System.Windows.Controls;
+using RebuildCubic;
 using JW.UHF;
 namespace RebuildCubic.ConnectFolder {
   /// <summary>
@@ -14,7 +15,8 @@ namespace RebuildCubic.ConnectFolder {
     public static bool TriggerButtonSwitch { get; set; }
     public static bool ClearButtonSwitch { get; set; }
     public static bool SetButtonSwitch { get; set; }
-    public string IP { get; set; } = "192.168.1.100";
+    public static string IP { get; set; } = "192.168.1.100";
+    public static int Port { get; set; } = 9761;
 
     public ConnectControl() {
       InitializeComponent();
@@ -25,7 +27,7 @@ namespace RebuildCubic.ConnectFolder {
       if ((string)ConnectButton.Content == "Connect") {
         // instance JWReadet with (ip and 9761)
         //CurrentState = "Try Connect to " + IP;
-        JwReader = new JWReader(IP, 9761);
+        JwReader = new JWReader(IP, Port);
         //Thread thread = new Thread(() => {
         //  Thread.Sleep(2000);
           if (JwReader.RFID_Open() == Result.OK) {

@@ -69,6 +69,7 @@
     <Compile Include="InventoryFolder\InventoryControl.xaml.cs">
       <DependentUpon>InventoryControl.xaml</DependentUpon>
     </Compile>
+    <Compile Include="PublicUseClass.cs" />
     <Compile Include="SetFolder\SetControl.xaml.cs">
       <DependentUpon>SetControl.xaml</DependentUpon>
     </Compile>

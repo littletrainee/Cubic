@@ -15,9 +15,11 @@ namespace RebuildCubic.InventoryFolder {
 
     public InventoryControl() {
       InitializeComponent();
+      IP = ConnectFolder.ConnectControl.IP;
+      Port = ConnectFolder.ConnectControl.Port;
     }
 
-    public void Button(object sender, RoutedEventArgs e) {
+    public void InventoryButton_Click(object sender, RoutedEventArgs e) {
       if ((string)InventoryButton.Content == "Inventory Start") {
         InventoryButton.Content = "Inventory Stop";
         Thread thread = new Thread(inventory_thread) {
@@ -35,12 +37,14 @@ namespace RebuildCubic.InventoryFolder {
     public int end_time { get; set; }
     public int global_tag_counts { get; set; }
     public bool inventory_update_start { get; set; }
+    public string IP { get; set; }
+    public int Port { get; set; }
 
     private void inventory_thread() {
+      jwReader = new JWReader(IP, Port);
       myupdate method = delegate {
         global_data_table.Clear();
         dataGridView1.ItemsSource = null;
-        
       };
       Dispatcher.Invoke(method);
       start_time = Environment.TickCount;
