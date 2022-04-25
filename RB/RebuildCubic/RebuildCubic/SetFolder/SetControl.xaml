@@ -1,5 +1,5 @@
 ﻿<UserControl
-  x:Class="RebuildCubic.InventoryFolder.InventoryControl"
+  x:Class="RebuildCubic.SetFolder.SetControl"
   xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
   xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
   xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -10,22 +10,14 @@
   >
   <Grid>
     <Button
-      x:Name="InventoryButton"
+      x:Name="SetButton"
       Width="100"
       Height="100"
-      Margin="672,270,0,0"
+      Margin="30,150,0,0"
       HorizontalAlignment="Left"
       VerticalAlignment="Top"
-      Content="Inventory"
-      IsEnabled="{Binding InventoryButtonSwitch}"
+      Content="Set"
+      IsEnabled="{Binding SetButtonSwitch}"
       />
-    <Grid>
-      <DataGrid
-        x:Name="dataGridView1"
-        Width="400"
-        Height="400"
-        d:ItemsSource="{d:SampleData ItemCount=5}"
-        />
-    </Grid>
   </Grid>
 </UserControl>

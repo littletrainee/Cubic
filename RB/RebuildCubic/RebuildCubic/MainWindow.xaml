@@ -2,23 +2,33 @@
   x:Class="RebuildCubic.MainWindow"
   xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
   xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+  xmlns:ClearFolder="clr-namespace:RebuildCubic.ClearFolder"
   xmlns:ConnectFolder="clr-namespace:RebuildCubic.ConnectFolder"
+  xmlns:DataTableFolder="clr-namespace:RebuildCubic.DataTableFolder"
+  xmlns:InventoryFolder="clr-namespace:RebuildCubic.InventoryFolder"
+  xmlns:SetFolder="clr-namespace:RebuildCubic.SetFolder"
   xmlns:StateFolder="clr-namespace:RebuildCubic.StateFolder"
   xmlns:TriggerFolder="clr-namespace:RebuildCubic.TriggerFolder"
   xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
   xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-  Title="MainWindow"
+  Title="RFID Reader By Glue-Soft"
   Width="800"
   Height="450"
   mc:Ignorable="d"
   >
   <Window.DataContext>
-    <ConnectFolder:ShowCurrentState />
+    <ConnectFolder:ChangeState />
   </Window.DataContext>
   <Grid>
     <ConnectFolder:ConnectControl />
-    <StateFolder:StateControl />
+    <!--  <StateFolder:StateControl />-->
+    <DataTableFolder:DataTableControl />
     <TriggerFolder:TriggerControl />
+    <InventoryFolder:InventoryControl />
+    <ClearFolder:ClearControl />
+    <SetFolder:SetControl />
+   
+
 
   </Grid>
 </Window>

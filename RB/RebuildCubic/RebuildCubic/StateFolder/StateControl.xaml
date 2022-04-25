@@ -17,7 +17,10 @@
       VerticalAlignment="Center"
       HorizontalContentAlignment="Center"
       VerticalContentAlignment="Center"
+      BorderBrush="Black"
+      BorderThickness="2,2,2,2"
       Content="{Binding CurrentState}"
+      Visibility="{Binding CurrentStateLabelShow}"
       />
   </Grid>
 </UserControl>
