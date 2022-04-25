@@ -23,8 +23,6 @@ namespace RebuildCubic.TriggerFolder {
       InventoryControl inv = new InventoryControl();
       // use inventorybutton.Button()
       inv.InventoryButton_Click(null, null);
-      InventoryFolder.InventoryControl inv = new InventoryFolder.InventoryControl();
-      inv.Button(null, null);
     }
   }
 }

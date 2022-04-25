@@ -46,7 +46,7 @@ namespace RebuildCubic.InventoryFolder {
         global_data_table.Clear();
         dataGridView1.ItemsSource = null;
       };
-      Dispatcher.Invoke(method);
+      Dispatcher.BeginInvoke(method);
       start_time = Environment.TickCount;
       global_tag_counts = 0;
       inventory_update_start = true;
