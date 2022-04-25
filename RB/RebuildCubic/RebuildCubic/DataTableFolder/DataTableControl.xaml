@@ -8,5 +8,26 @@
   d:DesignWidth="800"
   mc:Ignorable="d"
   >
-  
+  <Grid>
+    <ListBox
+      x:Name="TagNameList"
+      Width="400"
+      Height="400"
+      Margin="200,5,0,0"
+      HorizontalAlignment="Left"
+      VerticalAlignment="Top"
+      Visibility="{Binding ListNameBoxVisibility}"
+      >
+      <ListBoxItem x:Name="ID" Content="{Binding Taglist}" />
+    </ListBox>
+
+    <!-- <Button
+      x:Name="BtnStartInventory"
+      Width="100"
+      Height="30"
+      Margin="670,275,30,130"
+      Click="StartInventory_Click"
+      Content="Start Inventory"
+      />-->
+  </Grid>
 </UserControl>

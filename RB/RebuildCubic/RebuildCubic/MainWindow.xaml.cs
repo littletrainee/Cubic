@@ -1,4 +1,7 @@
-﻿using System.Windows;
+﻿using JW.UHF;
+using System;
+using System.Threading.Tasks;
+using System.Windows;
 
 namespace RebuildCubic {
   /// <summary>
@@ -8,5 +11,25 @@ namespace RebuildCubic {
     public MainWindow() {
       InitializeComponent();
     }
+   
+    private void WindowLoadForTest() {
+           //  process 1
+      //  process 2
+      //  process 3
+    }
+
+    //private void StartInventory_Click(object sender, RoutedEventArgs e) {
+    //  if (BtnStartInventory.Content == "Start Inventory") {
+        
+    //    // Start inventory process
+
+    //    BtnStartInventory.Content = "Stop Inventory";
+    //  } else 
+    //  {
+    //    // Stop inventory process
+
+    //    BtnStartInventory.Content = "Start Inventory";
+    //  }
+    //}
   }
 }

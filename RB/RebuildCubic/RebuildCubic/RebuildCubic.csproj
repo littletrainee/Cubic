@@ -62,21 +62,19 @@
     <Compile Include="ClearFolder\ClearControl.xaml.cs">
       <DependentUpon>ClearControl.xaml</DependentUpon>
     </Compile>
-    <Compile Include="ConnectFolder\ChangeState.cs" />
+    <Compile Include="ChangeState.cs" />
     <Compile Include="DataTableFolder\DataTableControl.xaml.cs">
       <DependentUpon>DataTableControl.xaml</DependentUpon>
     </Compile>
     <Compile Include="InventoryFolder\InventoryControl.xaml.cs">
       <DependentUpon>InventoryControl.xaml</DependentUpon>
     </Compile>
-    <Compile Include="PublicUseClass.cs" />
     <Compile Include="SetFolder\SetControl.xaml.cs">
       <DependentUpon>SetControl.xaml</DependentUpon>
     </Compile>
     <Compile Include="StateFolder\StateControl.xaml.cs">
       <DependentUpon>StateControl.xaml</DependentUpon>
     </Compile>
-    <Compile Include="TriggerFolder\HideStateLabelAndShowDataTable.cs" />
     <Compile Include="TriggerFolder\TriggerControl.xaml.cs">
       <DependentUpon>TriggerControl.xaml</DependentUpon>
     </Compile>

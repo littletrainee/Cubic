@@ -20,7 +20,7 @@
       BorderBrush="Black"
       BorderThickness="2,2,2,2"
       Content="{Binding CurrentState}"
-      Visibility="{Binding CurrentStateLabelShow}"
+      Visibility="{Binding StateLabelVisibility}"
       />
   </Grid>
 </UserControl>

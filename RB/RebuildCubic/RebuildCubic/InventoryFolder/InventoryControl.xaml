@@ -19,11 +19,5 @@
       Content="Inventory Start"
       IsEnabled="{Binding InventoryButtonSwitch}"
       />
-    <DataGrid
-      x:Name="dataGridView1"
-      Width="400"
-      Height="400"
-      d:ItemsSource="{d:SampleData ItemCount=5}"
-      />
   </Grid>
 </UserControl>

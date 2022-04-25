@@ -1,8 +1,8 @@
 ﻿using System;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
+using System.Windows;
 using System.Windows.Input;
-using JW.UHF;
 
 namespace RebuildCubic.ConnectFolder {
   /// <summary>
@@ -11,34 +11,22 @@ namespace RebuildCubic.ConnectFolder {
   /// </summary>
   internal class ChangeState : INotifyPropertyChanged, ICommand {
 
-    //private string _CurrentStateLabelShow;
-    //public string CurrentStateLabelShow {
-    //  get {
-    //    // show not connect at first time start
-    //    return _CurrentStateLabelShow;
-    //  }
-    //  set {
-    //    _CurrentStateLabelShow = value;
-    //    OnPropertyChanged("CurrentStateLabelShow");
-    //  }
-    //}
-    
-    //// CurrentState
-    //private string _CurrentState;
-    //public string CurrentState {
-    //  get {
-    //    // show not connect at first time start
-    //    if (_CurrentState == null) {
-    //      return "Not Connected";
-    //    } else {
-    //      return _CurrentState;
-    //    }
-    //  }
-    //  set {
-    //    _CurrentState = value;
-    //    OnPropertyChanged("CurrentState");
-    //  }
-    //}
+       // CurrentState
+    private string _CurrentState;
+    public string CurrentState {
+      get {
+        // show not connect at first time start
+        if (_CurrentState == null) {
+          return "Not Connected";
+        } else {
+          return _CurrentState;
+        }
+      }
+      set {
+        _CurrentState = value;
+        OnPropertyChanged("CurrentState");
+      }
+    }
 
     // InventoryButtonSwitch
     private bool _InventoryButtonSwitch;
@@ -64,38 +52,37 @@ namespace RebuildCubic.ConnectFolder {
       }
     }
 
-    // ClearButtonSwitch
-    private bool _ClearButtonSwitch;
-    public bool ClearButtonSwitch {
+    private Visibility _StateLabelVisibility;
+    public Visibility StateLabelVisibility {
       get {
-        return _ClearButtonSwitch;
+        return _StateLabelVisibility;
       }
       set {
-        _ClearButtonSwitch = value;
-        OnPropertyChanged("ClearButtonSwitch");
+        _StateLabelVisibility = value;
+        OnPropertyChanged("StateLabelVisibility");
       }
     }
 
-    // ClearButtonSwitch
-    private bool _SetButtonSwitch;
-    public bool SetButtonSwitch {
+    private Visibility _ListNameBoxVisibility;
+    public Visibility ListNameBoxVisibility {
       get {
-        return _SetButtonSwitch;
+        return _ListNameBoxVisibility;
       }
       set {
-        _SetButtonSwitch = value;
-        OnPropertyChanged("SetButtonSwitch");
+        _ListNameBoxVisibility = value;
+        OnPropertyChanged("ListNameBoxVisibility");
       }
     }
+
+
 
     // set variable in this class from ConnectControl
     public void Execute(object parameter) {
-      //CurrentState = ConnectControl.CurrentState;
+      CurrentState = ConnectControl.CurrentState;
       InventoryButtonSwitch = ConnectControl.InventoryButtonSwitch;
       TriggerButtonSwitch = ConnectControl.TriggerButtonSwitch;
-      ClearButtonSwitch = ConnectControl.ClearButtonSwitch;
-      SetButtonSwitch = ConnectControl.SetButtonSwitch;
-      //CurrentStateLabelShow = TriggerFolder.TriggerControl.CurrentStateLabelShow;
+      StateLabelVisibility = ConnectControl.StateLabelVisibility;
+      ListNameBoxVisibility = DataTableFolder.DataTableControl.ListNameBoxVisibility;
     }
 
     public bool CanExecute(object parameter) {
