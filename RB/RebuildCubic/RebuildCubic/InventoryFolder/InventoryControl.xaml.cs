@@ -31,7 +31,6 @@ namespace RebuildCubic.InventoryFolder {
       }
     }
 
-    public delegate void myupdate();
     private DataTable global_data_table { get; set; } = new DataTable();
     public int start_time { get; set; }
     public int end_time { get; set; }
@@ -42,21 +41,19 @@ namespace RebuildCubic.InventoryFolder {
 
     private void inventory_thread() {
       jwReader = new JWReader(IP, Port);
-      myupdate method = delegate {
+      Dispatcher.Invoke(() => {
         global_data_table.Clear();
         dataGridView1.ItemsSource = null;
-      };
-      Dispatcher.BeginInvoke(method);
+      });
       start_time = Environment.TickCount;
       global_tag_counts = 0;
       inventory_update_start = true;
       jwReader.RFID_Start_Inventory();
       end_time = Environment.TickCount;
       inventory_update_start = false;
-      myupdate method2 = delegate {
+      Dispatcher.Invoke(() => {
         InventoryButton.Content = "Inventory Start";
-      };
-      Dispatcher.Invoke(method2);
+      });
     }
 
   }
