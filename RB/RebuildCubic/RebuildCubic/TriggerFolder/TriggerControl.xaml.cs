@@ -2,6 +2,7 @@
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Threading;
+using RebuildCubic.InventoryFolder;
 
 namespace RebuildCubic.TriggerFolder {
   /// <summary>
@@ -14,12 +15,14 @@ namespace RebuildCubic.TriggerFolder {
       InitializeComponent();
       CurrentStateLabelShow = "Visible";
     }
-    public void Button(object sender, RoutedEventArgs e) {
+    public void TriggerButton_Click(object sender, RoutedEventArgs e) {
       Timer = new DispatcherTimer {
         Interval = new TimeSpan(0, 0, 1),
         IsEnabled = true
       };
+      InventoryControl inv = new InventoryControl();
       // use inventorybutton.Button()
+      inv.InventoryButton_Click(null, null);
       InventoryFolder.InventoryControl inv = new InventoryFolder.InventoryControl();
       inv.Button(null, null);
     }
