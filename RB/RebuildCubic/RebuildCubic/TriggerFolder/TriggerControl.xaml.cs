@@ -12,6 +12,11 @@ namespace RebuildCubic.TriggerFolder {
   /// </summary>
   public partial class TriggerControl : UserControl {
 
+    // Trigger Button IsEnabled holder
+    public static bool TriggerButtonIsEnabled { get; set; }
+    // Trigger Button Visibility holder
+    public static Visibility TriggerButtonVisibility { get; set; } 
+
     public DispatcherTimer Timer { get; set; }
     public static string CurrentStateLabelShow { get; set; }
     public TriggerControl() {

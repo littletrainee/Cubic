@@ -5,9 +5,9 @@
   xmlns:ConnectFolder="clr-namespace:RebuildCubic.ConnectFolder"
   xmlns:DataTableFolder="clr-namespace:RebuildCubic.DataTableFolder"
   xmlns:InventoryFolder="clr-namespace:RebuildCubic.InventoryFolder"
-  xmlns:StateFolder="clr-namespace:RebuildCubic.StateFolder"
   xmlns:TriggerFolder="clr-namespace:RebuildCubic.TriggerFolder"
   xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+  xmlns:local="clr-namespace:RebuildCubic"
   xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
   Title="RFID Reader By Glue-Soft"
   Width="800"
@@ -15,14 +15,13 @@
   mc:Ignorable="d"
   >
   <Window.DataContext>
-    <ConnectFolder:ChangeState />
+    <local:ChangeState />
   </Window.DataContext>
   <Grid>
     <ConnectFolder:ConnectControl />
-    <StateFolder:StateControl />
     <TriggerFolder:TriggerControl />
-    <InventoryFolder:InventoryControl />
-    <DataTableFolder:DataTableControl />
+    <!--<InventoryFolder:InventoryControl />-->
+    <!-- <DataTableFolder:DataTableControl />-->
 
     <!-- <ClearFolder:ClearControl /> -->
     <!-- <SetFolder:SetControl /> -->

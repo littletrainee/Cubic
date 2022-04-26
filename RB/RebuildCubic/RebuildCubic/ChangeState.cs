@@ -3,30 +3,16 @@ using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using System.Windows;
 using System.Windows.Input;
+using RebuildCubic.DataTableFolder;
+using RebuildCubic.TriggerFolder;
+using RebuildCubic.InventoryFolder;
 
-namespace RebuildCubic.ConnectFolder {
+namespace RebuildCubic {
   /// <summary>
   /// The value of this class is binding on ConnectControl.xaml.cs 
   /// and MainWindow.xaml, each value is trace to MainWindow.xaml
   /// </summary>
   internal class ChangeState : INotifyPropertyChanged, ICommand {
-
-       // CurrentState
-    private string _CurrentState;
-    public string CurrentState {
-      get {
-        // show not connect at first time start
-        if (_CurrentState == null) {
-          return "Not Connected";
-        } else {
-          return _CurrentState;
-        }
-      }
-      set {
-        _CurrentState = value;
-        OnPropertyChanged("CurrentState");
-      }
-    }
 
     // InventoryButtonSwitch
     private bool _InventoryButtonSwitch;
@@ -52,14 +38,15 @@ namespace RebuildCubic.ConnectFolder {
       }
     }
 
-    private Visibility _StateLabelVisibility;
-    public Visibility StateLabelVisibility {
+    // set default to hidden for first time start
+    private Visibility _TriggerButtonVisibility = Visibility.Hidden;
+    public Visibility TriggerButtonVisibility {
       get {
-        return _StateLabelVisibility;
+        return _TriggerButtonVisibility;
       }
       set {
-        _StateLabelVisibility = value;
-        OnPropertyChanged("StateLabelVisibility");
+        _TriggerButtonVisibility = value;
+        OnPropertyChanged("TriggerButtonVisibility");
       }
     }
 
@@ -78,11 +65,10 @@ namespace RebuildCubic.ConnectFolder {
 
     // set variable in this class from ConnectControl
     public void Execute(object parameter) {
-      CurrentState = ConnectControl.CurrentState;
-      InventoryButtonSwitch = ConnectControl.InventoryButtonSwitch;
-      TriggerButtonSwitch = ConnectControl.TriggerButtonSwitch;
-      StateLabelVisibility = ConnectControl.StateLabelVisibility;
-      ListNameBoxVisibility = DataTableFolder.DataTableControl.ListNameBoxVisibility;
+      //InventoryButtonSwitch = InventoryControl.InventoryButtonSwitch;
+      //ListNameBoxVisibility = DataTableControl.ListNameBoxVisibility;
+      TriggerButtonSwitch = TriggerControl.TriggerButtonIsEnabled;
+      TriggerButtonVisibility = TriggerControl.TriggerButtonVisibility;
     }
 
     public bool CanExecute(object parameter) {

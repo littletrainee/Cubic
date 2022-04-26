@@ -1,6 +1,4 @@
 ﻿using JW.UHF;
-using System;
-using System.Threading.Tasks;
 using System.Windows;
 
 namespace RebuildCubic {
@@ -10,12 +8,6 @@ namespace RebuildCubic {
   public partial class MainWindow : Window {
     public MainWindow() {
       InitializeComponent();
-    }
-   
-    private void WindowLoadForTest() {
-           //  process 1
-      //  process 2
-      //  process 3
     }
 
     //private void StartInventory_Click(object sender, RoutedEventArgs e) {

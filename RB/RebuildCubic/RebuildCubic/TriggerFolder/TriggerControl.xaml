@@ -16,9 +16,10 @@
       Margin="670,150,0,0"
       HorizontalAlignment="Left"
       VerticalAlignment="Top"
+      Click="TriggerButton_Click"
       Content="Trigger"
       IsEnabled="{Binding TriggerButtonSwitch}"
-      Click="TriggerButton_Click"
+      Visibility="{Binding TriggerButtonVisibility}"
       />
   </Grid>
 </UserControl>

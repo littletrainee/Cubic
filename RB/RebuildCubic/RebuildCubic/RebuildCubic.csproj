@@ -59,9 +59,6 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="ClearFolder\ClearControl.xaml.cs">
-      <DependentUpon>ClearControl.xaml</DependentUpon>
-    </Compile>
     <Compile Include="ChangeState.cs" />
     <Compile Include="DataTableFolder\DataTableControl.xaml.cs">
       <DependentUpon>DataTableControl.xaml</DependentUpon>
@@ -69,19 +66,9 @@
     <Compile Include="InventoryFolder\InventoryControl.xaml.cs">
       <DependentUpon>InventoryControl.xaml</DependentUpon>
     </Compile>
-    <Compile Include="SetFolder\SetControl.xaml.cs">
-      <DependentUpon>SetControl.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="StateFolder\StateControl.xaml.cs">
-      <DependentUpon>StateControl.xaml</DependentUpon>
-    </Compile>
     <Compile Include="TriggerFolder\TriggerControl.xaml.cs">
       <DependentUpon>TriggerControl.xaml</DependentUpon>
     </Compile>
-    <Page Include="ClearFolder\ClearControl.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="ConnectFolder\ConnectControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -109,14 +96,6 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="SetFolder\SetControl.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="StateFolder\StateControl.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="TriggerFolder\TriggerControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
