@@ -11,6 +11,7 @@
   mc:Ignorable="d"
   >
   <Grid>
+    <!--  ConnectButton  -->
     <Button
       x:Name="ConnectButton"
       Width="100"
@@ -22,6 +23,7 @@
       Command="{Binding}"
       Content="Connect"
       />
+    <!--  TriggerButton  -->
     <Button
       x:Name="TriggerButton"
       Width="100"
@@ -34,6 +36,7 @@
       IsEnabled="False"
       Visibility="Visible"
       />
+    <!--  InventoryButton  -->
     <Button
       x:Name="InventoryButton"
       Width="100"
@@ -46,18 +49,19 @@
       IsEnabled="False"
       Visibility="Visible"
       />
+    <!--  Clear  -->
     <Button
-      x:Name="InventoryButton_Copy"
+      x:Name="ClearButton"
       Width="100"
       Height="100"
       Margin="43,29,0,0"
       HorizontalAlignment="Left"
       VerticalAlignment="Top"
-      Click="InventoryButton_Click"
-      Content="Start Inventory"
+      Content="Clear"
       IsEnabled="False"
       Visibility="Visible"
       />
+    <!--  ListBox  -->
     <ListBox
       x:Name="TagNameList"
       Width="400"
@@ -66,6 +70,7 @@
       HorizontalAlignment="Left"
       VerticalAlignment="Top"
       Background="Transparent"
+      Visibility="Hidden"
       />
   </Grid>
 </Window>

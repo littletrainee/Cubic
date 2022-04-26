@@ -37,6 +37,8 @@ namespace RebuildCubic {
           ConnectOn();
           // set triggerbutton IsEnable and Visibility
           JwReader.TagsReported += JwReader_TagsReported;
+        } else {
+          MessageBox.Show("Not Connected!");
         }
         // ConnectButton.Content isn't Connect
       } else {
@@ -57,7 +59,10 @@ namespace RebuildCubic {
       // set ConnectButton.Margin = "670,30,0,0"
       ConnectButton.Margin = new Thickness(670, 30, 0, 0);
       TriggerButton.IsEnabled = true;
-      InventoryButton.IsEnabled = true;
+      //InventoryButton.IsEnabled = true;
+      //ClearButton.IsEnabled = true;
+      TagNameList.Visibility = Visibility.Visible;
+
 
     }
 
@@ -91,8 +96,13 @@ namespace RebuildCubic {
     /// <param name="sender"></param>
     /// <param name="e"></param>
     public void TriggerButton_Click(object sender, RoutedEventArgs e) {
+      // timer start 
+      //
+      // timer end
       // try to clear TagNameList
       TagNameList.Items.Clear();
+      Console.WriteLine("trigger button clicked");
+      //InventoryButton_Click(null, null);
       Task.Run(() => {
         JwReader.RFID_Start_Inventory();
       });
@@ -134,6 +144,14 @@ namespace RebuildCubic {
       Dispatcher.Invoke(() => {
         InventoryButton.Content = "Start Inventory";
       });
+    }
+
+    
+    private void ClearButton_Click(object sender, RoutedEventArgs e) {
+      if (!inventory_update_start) {
+        global_tag_counts = 0;
+      }
+      TagNameList.Items.Clear();
     }
   }
 }
