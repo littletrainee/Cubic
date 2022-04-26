@@ -9,7 +9,7 @@
   mc:Ignorable="d"
   >
   <Grid>
-    <Button
+    <!--<Button
       x:Name="ConnectButton"
       Width="100"
       Height="100"
@@ -18,7 +18,7 @@
       Click="ConnectButton_Click"
       Command="{Binding}"
       Content="Connect"
-      />
+      />-->
 
   </Grid>
 </UserControl>

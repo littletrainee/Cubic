@@ -9,7 +9,7 @@
   mc:Ignorable="d"
   >
   <Grid>
-    <!-- <ListBox
+    <ListBox
       x:Name="TagNameList"
       Width="400"
       Height="400"
@@ -19,7 +19,7 @@
       Visibility="{Binding ListNameBoxVisibility}"
       >
       <ListBoxItem x:Name="ID" Content="{Binding Taglist}" />
-    </ListBox>-->
+    </ListBox>
     <DataGrid
       x:Name="TagDataTable"
       Width="400"

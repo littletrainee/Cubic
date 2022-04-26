@@ -35,12 +35,21 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Caliburn.Micro.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=8e5891231f2ed21f, processorArchitecture=MSIL">
+      <HintPath>..\packages\Caliburn.Micro.Core.4.0.173\lib\netstandard2.0\Caliburn.Micro.Core.dll</HintPath>
+    </Reference>
     <Reference Include="SF.UHF, Version=0.0.0.0, Culture=neutral, processorArchitecture=x86">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>Dll\SF.UHF.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Runtime.Serialization.Primitives, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.Serialization.Primitives.4.3.0\lib\net46\System.Runtime.Serialization.Primitives.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -60,24 +69,24 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="ChangeState.cs" />
-    <Compile Include="DataTableFolder\DataTableControl.xaml.cs">
+    <Compile Include="AfterWork\DataTableFolder\DataTableControl.xaml.cs">
       <DependentUpon>DataTableControl.xaml</DependentUpon>
     </Compile>
-    <Compile Include="InventoryFolder\InventoryControl.xaml.cs">
+    <Compile Include="AfterWork\InventoryFolder\InventoryControl.xaml.cs">
       <DependentUpon>InventoryControl.xaml</DependentUpon>
     </Compile>
-    <Compile Include="TriggerFolder\TriggerControl.xaml.cs">
+    <Compile Include="AfterWork\TriggerFolder\TriggerControl.xaml.cs">
       <DependentUpon>TriggerControl.xaml</DependentUpon>
     </Compile>
-    <Page Include="ConnectFolder\ConnectControl.xaml">
+    <Page Include="AfterWork\ConnectFolder\ConnectControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="DataTableFolder\DataTableControl.xaml">
+    <Page Include="AfterWork\DataTableFolder\DataTableControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="InventoryFolder\InventoryControl.xaml">
+    <Page Include="AfterWork\InventoryFolder\InventoryControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -89,14 +98,14 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="ConnectFolder\ConnectControl.xaml.cs">
+    <Compile Include="AfterWork\ConnectFolder\ConnectControl.xaml.cs">
       <DependentUpon>ConnectControl.xaml</DependentUpon>
     </Compile>
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="TriggerFolder\TriggerControl.xaml">
+    <Page Include="AfterWork\TriggerFolder\TriggerControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -119,6 +128,7 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
