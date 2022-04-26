@@ -24,6 +24,8 @@ namespace RebuildCubic {
       InitializeComponent();
     }
 
+   
+    
     private void ConnectButton_Click(object sender, RoutedEventArgs e) {
       // if ConnectButton.Content is Connect
       if ((string)ConnectButton.Content == "Connect") {
@@ -38,7 +40,8 @@ namespace RebuildCubic {
           // set triggerbutton IsEnable and Visibility
           JwReader.TagsReported += JwReader_TagsReported;
         } else {
-          MessageBox.Show("Not Connected!");
+          mainwindow.Close();
+          ConnectErrorClass.ShowPopWindow();
         }
         // ConnectButton.Content isn't Connect
       } else {
