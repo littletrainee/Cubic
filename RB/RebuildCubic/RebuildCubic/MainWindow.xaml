@@ -49,15 +49,29 @@
       IsEnabled="False"
       Visibility="Visible"
       />
-    <!--  Clear  -->
+    <!--  ClearButton  -->
     <Button
       x:Name="ClearButton"
       Width="100"
       Height="100"
-      Margin="43,29,0,0"
+      Margin="30,30,0,0"
       HorizontalAlignment="Left"
       VerticalAlignment="Top"
+      Click="ClearButton_Click"
       Content="Clear"
+      IsEnabled="False"
+      Visibility="Visible"
+      />
+    <!--  SetButton  -->
+    <Button
+      x:Name="SetButton"
+      Width="100"
+      Height="100"
+      Margin="30,150,0,0"
+      HorizontalAlignment="Left"
+      VerticalAlignment="Top"
+      Click="SetButton_Click"
+      Content="Set"
       IsEnabled="False"
       Visibility="Visible"
       />
